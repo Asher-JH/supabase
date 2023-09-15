@@ -1,5 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
+import { useTheme } from 'common'
+import { useSignOut } from 'lib/auth'
+import { useProfile } from 'lib/profile'
+import { useState } from 'react'
 import {
   DropdownMenuContent_Shadcn_,
   DropdownMenuGroup_Shadcn_,
@@ -14,11 +19,6 @@ import {
   IconUser,
   useCommandMenu,
 } from 'ui'
-
-import { useTheme } from 'common'
-import { useSignOut } from 'lib/auth'
-import { useProfile } from 'lib/profile'
-import { useState } from 'react'
 
 const UserSettingsDropdown = () => {
   const signOut = useSignOut()
